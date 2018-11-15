@@ -1,6 +1,6 @@
 //
 //  BaseUITableViewController.swift
-//  Mobven Interview Project
+//  Weather Project
 //
 //  Created by Burak Uzunboy on 15.11.2018.
 //  Copyright © 2018 buzunboy. All rights reserved.
@@ -19,6 +19,14 @@ class BaseUITableViewController: UITableViewController {
     public var shouldHaveSpecialCells: Bool = false { didSet { self.tableView.reloadData() } }
     
     public var tableCellReuseIdentifier: String! = "reuseIdentifier"
+    
+    init() {
+        super.init(style: .plain)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,14 +85,14 @@ class BaseUITableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if shouldHaveSpecialCells {
             if indexPath.section == 1 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: tableCellReuseIdentifier,
-                                                         indexPath: indexPath, object: tableList[indexPath.row])
+                let cell = BaseUITableViewCell()
+                cell.initialize(title: tableList[indexPath.row].title, subtitle: tableList[indexPath.row].subtitle)
                 return cell
             }
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellReuseIdentifier,
-                                                 indexPath: indexPath, object: tableList[indexPath.row])
+        let cell = BaseUITableViewCell()
+        cell.initialize(title: tableList[indexPath.row].title, subtitle: tableList[indexPath.row].subtitle)
         return cell
     }
 

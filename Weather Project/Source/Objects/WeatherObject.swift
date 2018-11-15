@@ -1,6 +1,6 @@
 //
 //  WeatherObject.swift
-//  Mobven Interview Project
+//  Weather Project
 //
 //  Created by Burak Uzunboy on 15.11.2018.
 //  Copyright © 2018 buzunboy. All rights reserved.
@@ -54,6 +54,7 @@ public class WeatherObject: BaseObject {
         
         self.rainRate = rainDict?["3h"] as? Double
         self.snowRate = snowDict?["3h"] as? Double
+        super.init(title: "", subtitle: "")
     }
 
 }

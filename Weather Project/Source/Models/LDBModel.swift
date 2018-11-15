@@ -1,6 +1,6 @@
 //
 //  LDBModel.swift
-//  Mobven Interview Project
+//  Weather Project
 //
 //  Created by Burak Uzunboy on 15.11.2018.
 //  Copyright © 2018 buzunboy. All rights reserved.
@@ -41,8 +41,9 @@ public class LDBModel {
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
                     if let resultID = result.value(forKey: "id") as? Int,
-                        let name = result.value(forKey: "name") as? String {
-                        let obj = CityObject(id: resultID, name: name)
+                        let name = result.value(forKey: "name") as? String,
+                        let date = result.value(forKey: "date") as? Date {
+                        let obj = CityObject(id: resultID, name: name, date: date)
                         retVal.append(obj)
                     }
                 }
@@ -75,6 +76,7 @@ public class LDBModel {
                     if let resultID = result.value(forKey: "id") as? Int {
                         if resultID == city.id {
                             result.setValue(city.name, forKey: "name")
+                            result.setValue(city.latestFetchDate, forKey: "date")
                             isSavedBefore = true
                         }
                     }
@@ -89,6 +91,7 @@ public class LDBModel {
             let obj = NSEntityDescription.insertNewObject(forEntityName: "City", into: context)
             obj.setValue(city.id, forKey: "id")
             obj.setValue(city.name, forKey: "name")
+            obj.setValue(city.latestFetchDate, forKey: "date")
         }
         
         if context.hasChanges {

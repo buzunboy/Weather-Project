@@ -1,6 +1,6 @@
 //
 //  CityObject.swift
-//  Mobven Interview Project
+//  Weather Project
 //
 //  Created by Burak Uzunboy on 15.11.2018.
 //  Copyright © 2018 buzunboy. All rights reserved.
@@ -10,20 +10,26 @@ import UIKit
 
 public class CityObject: BaseObject {
     
-    var name: String!
-    var id: Int!
-    var coordinate: (Float,Float)!
-    var country: String!
-    var population: Int!
+    public var name: String!
+    public var id: Int!
+    public var coordinate: (Float,Float)!
+    public var country: String!
+    public var population: Int!
+    public var latestFetchDate: Date!
     
-    var weatherData: [WeatherObject]?
-    
-    public init(id: Int, name: String) {
+    public var weatherData: [WeatherObject]?
+
+    public init(id: Int, name: String, date: Date) {
+        super.init(title: name, subtitle: String(describing: date))
+        self.latestFetchDate = date
         self.id = id
         self.name = name
     }
     
     public init(id: Int, name: String, lat: Float, lon: Float, country: String, population: Int) {
+        let date = Date()
+        super.init(title: name, subtitle: String(describing: date))
+        self.latestFetchDate = date
         self.id = id
         self.name = name
         self.coordinate = (lat,lon)
@@ -42,11 +48,13 @@ public class CityObject: BaseObject {
                 return nil
         }
         
-        super.init()
+        let date = Date()
+        super.init(title: name, subtitle: String(describing: date))
         self.name = name
         self.id = id
         self.population = population
         self.country = country
+        self.latestFetchDate = Date()
         let lat = (coord["lat"] as! NSNumber).floatValue
         let lon = (coord["lon"] as! NSNumber).floatValue
         self.coordinate = (lat,lon)
