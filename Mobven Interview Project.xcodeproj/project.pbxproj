@@ -8,20 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		B049929E219D952F00C3949B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049929D219D952F00C3949B /* AppDelegate.swift */; };
-		B04992A0219D952F00C3949B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049929F219D952F00C3949B /* ViewController.swift */; };
 		B04992A3219D952F00C3949B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04992A1219D952F00C3949B /* Main.storyboard */; };
 		B04992A5219D953200C3949B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04992A4219D953200C3949B /* Assets.xcassets */; };
 		B04992A8219D953200C3949B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04992A6219D953200C3949B /* LaunchScreen.storyboard */; };
+		B04992B5219D96F300C3949B /* LocalDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B04992B3219D96F300C3949B /* LocalDB.xcdatamodeld */; };
+		B04992B9219D977400C3949B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992B8219D977400C3949B /* WeatherModel.swift */; };
+		B04992BC219D97B000C3949B /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992BB219D97B000C3949B /* WeatherObject.swift */; };
+		B04992BF219D97D200C3949B /* CityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992BE219D97D200C3949B /* CityObject.swift */; };
+		B04992C1219D9F8B00C3949B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992C0219D9F8B00C3949B /* HomeViewController.swift */; };
+		B04992C3219DA66100C3949B /* CityDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992C2219DA66100C3949B /* CityDetailTableViewController.swift */; };
+		B04992C5219DA67100C3949B /* WeatherDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992C4219DA67100C3949B /* WeatherDetailTableViewController.swift */; };
+		B04992C8219DA6AC00C3949B /* BaseUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992C7219DA6AC00C3949B /* BaseUITableViewController.swift */; };
+		B04992CA219DA6B900C3949B /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992C9219DA6B900C3949B /* BaseUIViewController.swift */; };
+		B04992CD219DA71500C3949B /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992CC219DA71500C3949B /* NSObjectExt.swift */; };
+		B04992CF219DA7E600C3949B /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992CE219DA7E600C3949B /* BaseObject.swift */; };
+		B04992D2219DA90D00C3949B /* TableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992D1219DA90D00C3949B /* TableViewExt.swift */; };
+		B04992D5219DA99700C3949B /* BaseUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992D4219DA99700C3949B /* BaseUITableViewCell.swift */; };
+		B04992D7219DB04C00C3949B /* NSErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992D6219DB04C00C3949B /* NSErrorExt.swift */; };
+		B04992D9219DC41E00C3949B /* LDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04992D8219DC41E00C3949B /* LDBModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B049929A219D952F00C3949B /* Mobven Interview Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobven Interview Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049929D219D952F00C3949B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B049929F219D952F00C3949B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B04992A2219D952F00C3949B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B04992A4219D953200C3949B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04992A7219D953200C3949B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B04992A9219D953200C3949B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B04992B4219D96F300C3949B /* LocalDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalDB.xcdatamodel; sourceTree = "<group>"; };
+		B04992B8219D977400C3949B /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		B04992BB219D97B000C3949B /* WeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherObject.swift; sourceTree = "<group>"; };
+		B04992BE219D97D200C3949B /* CityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityObject.swift; sourceTree = "<group>"; };
+		B04992C0219D9F8B00C3949B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B04992C2219DA66100C3949B /* CityDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailTableViewController.swift; sourceTree = "<group>"; };
+		B04992C4219DA67100C3949B /* WeatherDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailTableViewController.swift; sourceTree = "<group>"; };
+		B04992C7219DA6AC00C3949B /* BaseUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITableViewController.swift; sourceTree = "<group>"; };
+		B04992C9219DA6B900C3949B /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		B04992CC219DA71500C3949B /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
+		B04992CE219DA7E600C3949B /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
+		B04992D1219DA90D00C3949B /* TableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExt.swift; sourceTree = "<group>"; };
+		B04992D4219DA99700C3949B /* BaseUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITableViewCell.swift; sourceTree = "<group>"; };
+		B04992D6219DB04C00C3949B /* NSErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExt.swift; sourceTree = "<group>"; };
+		B04992D8219DC41E00C3949B /* LDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDBModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +82,116 @@
 		B049929C219D952F00C3949B /* Mobven Interview Project */ = {
 			isa = PBXGroup;
 			children = (
-				B049929D219D952F00C3949B /* AppDelegate.swift */,
-				B049929F219D952F00C3949B /* ViewController.swift */,
-				B04992A1219D952F00C3949B /* Main.storyboard */,
-				B04992A4219D953200C3949B /* Assets.xcassets */,
-				B04992A6219D953200C3949B /* LaunchScreen.storyboard */,
-				B04992A9219D953200C3949B /* Info.plist */,
+				B04992AF219D968F00C3949B /* Source */,
 			);
 			path = "Mobven Interview Project";
+			sourceTree = "<group>";
+		};
+		B04992AF219D968F00C3949B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B04992CB219DA70600C3949B /* Extensions */,
+				B04992BA219D979700C3949B /* Objects */,
+				B04992B7219D973900C3949B /* Source Files */,
+				B04992B6219D970B00C3949B /* Bundle Files */,
+				B04992B1219D96A400C3949B /* GUI */,
+				B04992B0219D969700C3949B /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B04992B0219D969700C3949B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B04992B8219D977400C3949B /* WeatherModel.swift */,
+				B04992D8219DC41E00C3949B /* LDBModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B04992B1219D96A400C3949B /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				B04992D0219DA8C400C3949B /* Storyboards */,
+				B04992C6219DA69E00C3949B /* Base View Controllers */,
+				B04992D3219DA97E00C3949B /* Table View Cells */,
+				B04992B2219D96A900C3949B /* View Controllers */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		B04992B2219D96A900C3949B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B04992C0219D9F8B00C3949B /* HomeViewController.swift */,
+				B04992C2219DA66100C3949B /* CityDetailTableViewController.swift */,
+				B04992C4219DA67100C3949B /* WeatherDetailTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B04992B6219D970B00C3949B /* Bundle Files */ = {
+			isa = PBXGroup;
+			children = (
+				B04992B3219D96F300C3949B /* LocalDB.xcdatamodeld */,
+				B04992A4219D953200C3949B /* Assets.xcassets */,
+			);
+			path = "Bundle Files";
+			sourceTree = "<group>";
+		};
+		B04992B7219D973900C3949B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B049929D219D952F00C3949B /* AppDelegate.swift */,
+				B04992A9219D953200C3949B /* Info.plist */,
+			);
+			path = "Source Files";
+			sourceTree = "<group>";
+		};
+		B04992BA219D979700C3949B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B04992BB219D97B000C3949B /* WeatherObject.swift */,
+				B04992BE219D97D200C3949B /* CityObject.swift */,
+				B04992CE219DA7E600C3949B /* BaseObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		B04992C6219DA69E00C3949B /* Base View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B04992C7219DA6AC00C3949B /* BaseUITableViewController.swift */,
+				B04992C9219DA6B900C3949B /* BaseUIViewController.swift */,
+			);
+			path = "Base View Controllers";
+			sourceTree = "<group>";
+		};
+		B04992CB219DA70600C3949B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B04992CC219DA71500C3949B /* NSObjectExt.swift */,
+				B04992D1219DA90D00C3949B /* TableViewExt.swift */,
+				B04992D6219DB04C00C3949B /* NSErrorExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B04992D0219DA8C400C3949B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B04992A6219D953200C3949B /* LaunchScreen.storyboard */,
+				B04992A1219D952F00C3949B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B04992D3219DA97E00C3949B /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B04992D4219DA99700C3949B /* BaseUITableViewCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +265,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04992A0219D952F00C3949B /* ViewController.swift in Sources */,
+				B04992D2219DA90D00C3949B /* TableViewExt.swift in Sources */,
+				B04992B5219D96F300C3949B /* LocalDB.xcdatamodeld in Sources */,
+				B04992BC219D97B000C3949B /* WeatherObject.swift in Sources */,
+				B04992C8219DA6AC00C3949B /* BaseUITableViewController.swift in Sources */,
+				B04992C3219DA66100C3949B /* CityDetailTableViewController.swift in Sources */,
+				B04992C5219DA67100C3949B /* WeatherDetailTableViewController.swift in Sources */,
+				B04992CF219DA7E600C3949B /* BaseObject.swift in Sources */,
+				B04992CA219DA6B900C3949B /* BaseUIViewController.swift in Sources */,
+				B04992BF219D97D200C3949B /* CityObject.swift in Sources */,
+				B04992D7219DB04C00C3949B /* NSErrorExt.swift in Sources */,
+				B04992CD219DA71500C3949B /* NSObjectExt.swift in Sources */,
+				B04992D5219DA99700C3949B /* BaseUITableViewCell.swift in Sources */,
+				B04992D9219DC41E00C3949B /* LDBModel.swift in Sources */,
+				B04992B9219D977400C3949B /* WeatherModel.swift in Sources */,
 				B049929E219D952F00C3949B /* AppDelegate.swift in Sources */,
+				B04992C1219D9F8B00C3949B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH7WKQ5F7Q;
-				INFOPLIST_FILE = "Mobven Interview Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mobven Interview Project/Source/Source Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH7WKQ5F7Q;
-				INFOPLIST_FILE = "Mobven Interview Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mobven Interview Project/Source/Source Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +480,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B04992B3219D96F300C3949B /* LocalDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B04992B4219D96F300C3949B /* LocalDB.xcdatamodel */,
+			);
+			currentVersion = B04992B4219D96F300C3949B /* LocalDB.xcdatamodel */;
+			path = LocalDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B0499292219D952F00C3949B /* Project object */;
 }
