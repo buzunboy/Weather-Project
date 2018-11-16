@@ -9,22 +9,22 @@ Written by Burak Uzunboy.
 ## Test Results
 
 ### Memory Leak Test
-![alt text](https://github.com/buzunboy13/Weather-Project/tree/master/Weather%20Project/img/memory_leak_test.png)
+![alt text](https://raw.githubusercontent.com/buzunboy13/Weather-Project/master/img/memory_leak_test.png)
 
 1 min test done. No memory leak detected. 
 
 ### CPU Load Test
-![alt text](https://github.com/buzunboy13/Weather-Project/tree/master/Weather%20Project/img/cpu_load_test.png)
+![alt text](https://raw.githubusercontent.com/buzunboy13/Weather-Project/master/img/cpu_load_test.png)
 
 1 min test done. No overload detected, stable CPU load.
 
 ### Energy Test
-![alt text](https://github.com/buzunboy13/Weather-Project/tree/master/Weather%20Project/img/energy_test.png)
+![alt text](https://raw.githubusercontent.com/buzunboy13/Weather-Project/master/img/energy_test.png)
 
 1 min test done. All energy activies resulted as expected.
 
 ### I/O Test
-![alt text](https://github.com/buzunboy13/Weather-Project/tree/master/Weather%20Project/img/i/o_test.png)
+![alt text](https://raw.githubusercontent.com/buzunboy13/Weather-Project/master/img/i%3Ao_test.png)
 
 30 sec test done. All results are as expected.
 
