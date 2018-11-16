@@ -25,7 +25,7 @@ class WeatherDetailTableViewController: BaseUITableViewController {
     public func initialize(weather: WeatherObject, cityName: String) {
         self.object = weather
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d HH:mm"
+        formatter.dateFormat = "MMMM d, HH:mm"
         let dateStr = formatter.string(from: weather.date)
         self.navigationItem.title = dateStr
         self.tableView.reloadData()
@@ -38,7 +38,7 @@ class WeatherDetailTableViewController: BaseUITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 12
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,6 +47,10 @@ class WeatherDetailTableViewController: BaseUITableViewController {
         }
         
         return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,18 +96,14 @@ class WeatherDetailTableViewController: BaseUITableViewController {
                 cell.detailLabel.text = "\(String(describing: object.windSpeed!)) meter/sec"
             }
             else if indexPath.row == 9 {
-                cell.titleLabel.text = "Wind Speed"
-                cell.detailLabel.text = "\(String(describing: object.windSpeed!)) meter/sec"
-            }
-            else if indexPath.row == 10 {
                 cell.titleLabel.text = "Wind Direction"
                 cell.detailLabel.text = "\(String(describing: object.windDirection!)) deg."
             }
-            else if indexPath.row == 11 {
+            else if indexPath.row == 10 {
                 cell.titleLabel.text = "Rain Volume"
                 cell.detailLabel.text = "\(String(describing: object.rainRate ?? 0.0)) mm"
             }
-            else if indexPath.row == 12 {
+            else if indexPath.row == 11 {
                 cell.titleLabel.text = "Snow Volume"
                 cell.detailLabel.text = "\(String(describing: object.snowRate ?? 0.0)) mm"
             }

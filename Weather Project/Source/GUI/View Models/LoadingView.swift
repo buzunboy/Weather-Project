@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Loading View Model
+ - Since: 16.11.2018
+ */
 @IBDesignable
 class LoadingView: UIView {
     
@@ -25,7 +29,7 @@ class LoadingView: UIView {
     private var backgroundBlurView: UIVisualEffectView!
     
     /**
-     * Initializes LR Loading Indicator on a base point with given radius.
+     * Initializes Loading Indicator on a base point with given radius.
      * - parameter maxRadii: Radius for the indicator.
      */
     init(maxRadii: CGFloat) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityDetailTableViewController: BaseUITableViewController {
+class CityDetailTableViewController: UITableViewController {
     
     private static let coverCellIdentifier = "coverCell"
     private static let weatherCellIdentifier = "weatherCell"
@@ -17,6 +17,7 @@ class CityDetailTableViewController: BaseUITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
     }
     
     public func initialize(city: CityObject) {
@@ -29,10 +30,11 @@ class CityDetailTableViewController: BaseUITableViewController {
         }
         self.tableView.reloadData()
     }
+  
     
     public func reloadCityInfo(city: CityObject, completion: @escaping (_ loaded: Bool)->()) {
         self.selectedCity = city
-        WeatherModel.getForecast(ofCity: self.selectedCity.name) { (object) in
+        WeatherModel.sharedInstance.getForecast(ofCity: self.selectedCity.name) { (object) in
             if let object = object {
                 self.initialize(city: object)
                 completion(true)
@@ -42,7 +44,7 @@ class CityDetailTableViewController: BaseUITableViewController {
         }
     }
     
-    override func prepareUI() {
+    func prepareUI() {
         if #available(iOS 11, *) {
             self.navigationItem.largeTitleDisplayMode = .always
             self.navigationController?.navigationBar.prefersLargeTitles = true

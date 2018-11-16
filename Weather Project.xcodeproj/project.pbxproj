@@ -169,6 +169,9 @@
 		B049940A219E08F900C3949B /* WeatherDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0499409219E08F900C3949B /* WeatherDetailTableViewCell.swift */; };
 		B049940C219E181F00C3949B /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049940B219E181F00C3949B /* HistoryTableViewController.swift */; };
 		B049940F219E1BFD00C3949B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049940E219E1BFD00C3949B /* LoadingView.swift */; };
+		B0499411219E915C00C3949B /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0499410219E915C00C3949B /* AlertViewModel.swift */; };
+		B0499413219E939B00C3949B /* PListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0499412219E939B00C3949B /* PListModel.swift */; };
+		B0499415219E93FF00C3949B /* WeatherApiProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0499414219E93FF00C3949B /* WeatherApiProperties.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -336,6 +339,9 @@
 		B0499409219E08F900C3949B /* WeatherDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B049940B219E181F00C3949B /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		B049940E219E1BFD00C3949B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B0499410219E915C00C3949B /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		B0499412219E939B00C3949B /* PListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListModel.swift; sourceTree = "<group>"; };
+		B0499414219E93FF00C3949B /* WeatherApiProperties.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WeatherApiProperties.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +398,7 @@
 			children = (
 				B04992B8219D977400C3949B /* WeatherModel.swift */,
 				B04992D8219DC41E00C3949B /* LDBModel.swift */,
+				B0499412219E939B00C3949B /* PListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 			children = (
 				B04992B3219D96F300C3949B /* LocalDB.xcdatamodeld */,
 				B04992A4219D953200C3949B /* Assets.xcassets */,
+				B0499414219E93FF00C3949B /* WeatherApiProperties.plist */,
 			);
 			path = "Bundle Files";
 			sourceTree = "<group>";
@@ -779,6 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				B049940E219E1BFD00C3949B /* LoadingView.swift */,
+				B0499410219E915C00C3949B /* AlertViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -846,6 +855,7 @@
 				B0499402219DF42A00C3949B /* README.md in Resources */,
 				B049937A219DF42A00C3949B /* LICENSE in Resources */,
 				B04992A3219D952F00C3949B /* Main.storyboard in Resources */,
+				B0499415219E93FF00C3949B /* WeatherApiProperties.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,6 +921,7 @@
 				B04993E4219DF42A00C3949B /* ChartDataSet.swift in Sources */,
 				B04993E2219DF42A00C3949B /* PieChartDataSet.swift in Sources */,
 				B04993F2219DF42A00C3949B /* IRadarChartDataSet.swift in Sources */,
+				B0499411219E915C00C3949B /* AlertViewModel.swift in Sources */,
 				B04993E7219DF42A00C3949B /* PieChartData.swift in Sources */,
 				B049937E219DF42A00C3949B /* LegendRenderer.swift in Sources */,
 				B04993B1219DF42A00C3949B /* ChartAnimationEasing.swift in Sources */,
@@ -995,6 +1006,7 @@
 				B0499395219DF42A00C3949B /* HorizontalBarChartRenderer.swift in Sources */,
 				B04993FF219DF42A00C3949B /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
 				B04993FE219DF42A00C3949B /* LineChartDataProvider.swift in Sources */,
+				B0499413219E939B00C3949B /* PListModel.swift in Sources */,
 				B04993CF219DF42A00C3949B /* ZoomViewJob.swift in Sources */,
 				B04993DF219DF42A00C3949B /* BubbleChartDataEntry.swift in Sources */,
 				B04993B7219DF42A00C3949B /* IndexAxisValueFormatter.swift in Sources */,

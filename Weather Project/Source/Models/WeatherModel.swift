@@ -10,19 +10,36 @@ import Foundation
 
 /**
  Controls forecast of the cities by fetching from the **OpenWeatherMap API**.
+ - Since: 15.11.2018
  */
 public class WeatherModel {
     
-    fileprivate static let apiUrl = "http://api.openweathermap.org/data/2.5/forecast"
-    fileprivate static let appIdentifier = "8827fbf408dc7e1418f3c1e84596334c"
+    public static let sharedInstance = WeatherModel()
     
+    fileprivate var apiUrl: String!
+    fileprivate var appIdentifier: String!
+    
+    private var plistHandler: PListModel!
+    
+    private init() {
+        self.plistHandler = PListModel(listName: "WeatherApiProperties")
+        guard let dict = self.plistHandler.loadProperties(),
+        let appId = dict["appId"] as? String,
+        let url = dict["urlAddress"]  as? String else {
+            fatalError("Couldn't find WeatherApiProperties.plist file")
+        }
+        
+        self.apiUrl = url
+        self.appIdentifier = appId
+    }
+
     /**
      Fetches forecast of the specified city
      - parameter city: Name of the city.
      - parameter completion: Returns fetch result of the specified city.
      - parameter result: **CityObject** if fetches successfuly, *nil* otherwise.
     */
-    public static func getForecast(ofCity city: String, completion: @escaping (_ result: CityObject?)->()) {
+    public func getForecast(ofCity city: String, completion: @escaping (_ result: CityObject?)->()) {
         var urlComponents = URLComponents(url: URL(string: apiUrl)!, resolvingAgainstBaseURL: false)!
         let cityName = URLQueryItem(name: "q", value: city)
         let units = URLQueryItem(name: "units", value: "metric")
@@ -61,7 +78,7 @@ public class WeatherModel {
      - parameter error: Nil if successfuly responded.
      - parameter result: Response of the request if operation is completed successfuly, *nil* otherwise.
     */
-    private static func executeRequest(_ withURL: URL, completion: @escaping (_ error: Error?, _ result: Any?)->()) {
+    private func executeRequest(_ withURL: URL, completion: @escaping (_ error: Error?, _ result: Any?)->()) {
         
         DispatchQueue.global().async {
             

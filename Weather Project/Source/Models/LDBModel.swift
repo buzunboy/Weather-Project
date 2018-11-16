@@ -11,6 +11,7 @@ import CoreData
 
 /**
  Local Database Model. Stores objects to the LDB.
+ - Since: 15.11.2018
  */
 public class LDBModel {
     

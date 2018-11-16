@@ -52,8 +52,8 @@ public class WeatherObject: BaseObject {
         self.windSpeed = windDict["speed"] as? Double
         self.windDirection = windDict["deg"] as? Double
         
-        self.rainRate = rainDict?["3h"] as? Double
-        self.snowRate = snowDict?["3h"] as? Double
+        self.rainRate = (rainDict?["3h"] as? Double)?.roundedToNextSignficant()
+        self.snowRate = (snowDict?["3h"] as? Double)?.roundedToNextSignficant()
         super.init(title: "", subtitle: "")
     }
 
