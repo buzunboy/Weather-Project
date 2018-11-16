@@ -39,6 +39,7 @@ class HomeViewController: BaseUIViewController {
         super.viewWillAppear(animated)
         self.historyObj = LDBModel.sharedInstance.getCities()
         (self.historyObj.count > 0) ? (pickerBtn.isEnabled = true) : (pickerBtn.isEnabled = false)
+        self.pickerView.reloadAllComponents()
     }
     
     override func prepareUI() {

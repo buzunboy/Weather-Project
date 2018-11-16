@@ -28,7 +28,7 @@ public class LDBModel {
     
     /**
      Returns cities saved to the Local Database
-     - returns: City Object Array. Only name and identifier is saved.
+     - returns: City Object Array sorted by latest fetch dates. Only name and identifier is saved.
      Do not use other properties before fetch from WeatherModel.
      */
     public func getCities() -> [CityObject] {
@@ -53,6 +53,7 @@ public class LDBModel {
             NSLog("Couldn't fetch results for \(#function) - Error: \(error.localizedDescription)")
         }
         
+        retVal.sort(by: { $0.latestFetchDate > $1.latestFetchDate })
         return retVal
     }
     
